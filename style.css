@@ -1,0 +1,92 @@
+/* simple calculator layout */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*body element styling */
+
+body {
+    background-color:midnightblue;
+    font-family: sans-serif;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+/* calculator container */
+
+.calculator {
+    background-color: darkslateblue;
+    padding: 10px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba( 0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+/* display screen */
+
+.result {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: right;
+    margin-bottom: 10px;
+    background-color: azure;
+    color: dimgray;
+
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+   
+}
+
+button{
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+
+}
+
+button:hover {
+    background-color: azure;
+
+}
+
+    .clear {
+        background-color:darkgrey;
+        
+    }
+
+    .number, .decimal {
+        background-color:slateblue;
+    }
+
+    .operator{
+        background-color: darkorange;
+    }
+
+    .equals {
+        background-color:slategray;
+        grid-row: span 2;
+
+    }
+    /* Responsive design for tablets and screens wider than 500px*/
+
+@media screen and (min-width: 500px) {
+    .calculator {
+        max-width: 300px;
+    }
+}
