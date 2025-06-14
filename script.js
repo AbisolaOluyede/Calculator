@@ -71,6 +71,10 @@ button.addEventListener('click', () => {
         result.textContent = '';
         result.textContent = '0';
     }
+    else if (button.classList.contains('backspace')) {
+        currentInput = currentInput.slice(0, -1);
+        result.textContent = currentInput || '0'
+    }
   });
 });
 
